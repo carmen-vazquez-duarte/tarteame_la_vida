@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contacto</title> <!-- Sets the title of the webpage that appears in the browser tab. -->
+    <link rel="icon" type="image/png" href="/TLVfotos-videos/6.Otros/acronimo-4.png">  <!-- Adds a favicon for the website. -->
+    <link rel="stylesheet" href="/CSS/EstiloContacto.css"> <!-- Links to an external CSS file ("EstiloContacto.css") that provides styles specific to the 'Contacto' (Contact) page. -->
+    <link rel="stylesheet" href="/CSS/HEADER.css">  <!-- Links to an external CSS file (shared by  all the HTML pages) -->
+</head>
+<body> 
+
+<!-- HEADER -->
+<!-- Navigation Bar -->
+<header>
+    <nav class="nav-bar">
+      <!--This is the main navigation bar where links to different pages of the website are displayed.-->  
+        <div class="logo"><!-- Logo -->
+        <p>Tartéame la vida</p> <!-- Logo text --> 
+        </div>
+  
+      <!-- Checkbox for the hamburger menu (used for mobile navigation) -->
+        <input type="checkbox" id="check" class="menu-toggle"><!--Acts as the trigger for a responsive menu (like a hamburger menu).-->
+        
+       <!-- Icon to open the menu -->
+        <label for="check" class="open-menu">&#9776;</label>  <!-- Clicking on this label toggles the checkbox, controlling the menu's visibility.-->
+        
+  <!-- Navigation Menu. Each link points to a specific page of the website-->
+        <ul class="menu">
+          <!-- Navigation links -->
+            <li><a href="Index.html" class="nav-link">INICIO</a></li>
+            <li><a href="IndexSobreMi.html" class="nav-link">SOBRE MI</a></li> 
+            <li><a href="IndexTienda.html" class="nav-link">TIENDA</a></li> 
+            <li><a href="IndexFormulario.html" class="nav-link">PERSONALIZACIÓN</a></li> 
+            <li><a href="IndexContacto.html" class="nav-link">CONTACTO</a></li> 
+        </ul>
+         <!-- End of navigation menu -->
+    </nav>
+  </header>
+  
+  <!-- Introduction section with a background image -->
+  <section class="intro">
+    <div class="intro-content">  <!-- Logo in the introduction section -->
+       <img src="/TLVfotos-videos/6.Otros/Logo-POSTRES-ARTESANALES.png" alt="logo tlv"> <!-- Inline style adjusted for syntax correctness -->
+    </div>
+  </section>
+  
+
+  
+  
+
+
+<!-- FORM -->
+    <main>  <!-- Main container for the form content. -->
+        <section class="formulario__container"> <!-- Groups the form and decorative image. -->
+            <img class="formulario__container--img" src="/TLVfotos-videos/5.Contacto/brooke-lark-GTMGG-xvxdU-unsplash.jpg" alt="Tarta en encimera de cocina" width="600">
+
+            <form  class="formulario" action="tratamiento.php" method="POST"> <!-- Form sends data to a PHP file using POST method.NOT IN USE -->
+                <div class="formulario__field"> <!-- Text field for the user's name -->
+                    <label class="formulario__field--label" for="nombre">Nombre:</label>
+                    <input class="formulario__field--input" id="nombre" name="nombre" type="text" required> <!-- Input field for name (required). -->
+                </div>
+
+                <div class="formulario__field">  <!-- Email or social media field -->
+                    <label class="formulario__field--label" for="email">Email/Social media:</label> 
+                    <input class="formulario__field--input" id="email" name="email" type="email" required> 
+                </div>
+
+                <div class="formulario__field"><!-- Dropdown menu for selecting the message subject -->
+                    <label class="formulario__field--label" for="asunto">Asunto:</label> 
+                    <select class="formulario__field--select" id="asunto" name="asunto" required><!-- Option for feedback. -->
+                        <option value="opinion">Exprésate tras probar "Tartéame la vida"</option>
+                        <option value="pregunta">Pregunta lo que desees</option>
+                        <option value="problema">¿Tienes algún problema? Dímelo</option>
+                        <option value="sugerencia">Comparte tus sugerencias</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="formulario__field"> <!-- Textarea for the user's message -->
+                    <label class="formulario__field--label" for="comentario">Mensaje:</label> 
+                    <textarea class="formulario__field--textarea" id="comentario" name="comentario" cols="30" rows="10" required></textarea> 
+                </div>
+
+                <div class="formulario__field"> <!-- Submit button -->
+                    <button class="formulario__field--button" type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+
+<!-- FOOTER-->
+<footer> 
+    <ul class="social-media"> <!-- Creates a list for social media links. -->
+        <li>
+            <a href="https://www.instagram.com/tarteamelavida/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-instagram.svg" alt="Instagram"> 
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-facebook (1).svg" alt="Facebook"> 
+            </a>
+        </li>
+        <li>    
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-youtube.svg" alt="YouTube"> 
+            </a>
+        </li>
+        <li>   
+            <a href="https://mail.google.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bx-envelope.svg" alt="Correo electrónico"> 
+            </a>
+        </li>
+    </ul>
+  
+    <ul class="menu2">  <!-- Creates a list for footer navigation links. -->
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Aviso legal</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Condiciones de compra</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Privacidad</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Cookies</a></li>
+    </ul>
+    <p class="text">&copy; 2024 | Tartéame la vida | Todos los derechos reservados | Hecho por Carmenquezarte (Carmen Vázquez)</p> 
+     <!-- Copyright notice and credits. -->
+  </footer>
+  </body>
+  </html>
+  
+  
+  

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Inicio</title> <!-- Sets the title of the webpage that appears in the browser tab. -->
+    <link rel="icon" type="image/png" href="/TLVfotos-videos/6.Otros/acronimo-4.png"> <!-- Sets a favicon (icon displayed in the browser tab) for the website. The favicon is a PNG image -->
+    <link rel="stylesheet" href="/CSS/EstiloInicio.css">  <!-- Links an external CSS stylesheet for the page's styles (related to the homepage layout). -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"><!-- Links to FontAwesome, a popular library for adding vector icons and social logos. -->
+    <script defer src="../JS/jsindex.js"></script>  <!-- Links to an external JavaScript file (containing interactive functionality for the homepage). 
+    The "defer" attribute ensures the script is executed after the HTML is parsed. -->
+    <link rel="stylesheet" href="/CSS/HEADER.css"> <!-- Links to an external CSS file (shared by  all the HTML pages) -->
+
+
+</head>
+<body> 
+
+
+<!-- HEADER -->
+<!-- Navigation Bar -->
+<header>
+  <nav class="nav-bar">
+    <!--This is the main navigation bar where links to different pages of the website are displayed.-->  
+      <div class="logo"><!-- Logo -->
+      <p>Tartéame la vida</p> <!-- Logo text --> 
+      </div>
+
+    <!-- Checkbox for the hamburger menu (used for mobile navigation) -->
+      <input type="checkbox" id="check" class="menu-toggle"><!--Acts as the trigger for a responsive menu (like a hamburger menu).-->
+      
+     <!-- Icon to open the menu -->
+      <label for="check" class="open-menu">&#9776;</label>  <!-- Clicking on this label toggles the checkbox, controlling the menu's visibility.-->
+      
+<!-- Navigation Menu. Each link points to a specific page of the website-->
+      <ul class="menu">
+        <!-- Navigation links -->
+          <li><a href="Index.html" class="nav-link">INICIO</a></li>
+          <li><a href="IndexSobreMi.html" class="nav-link">SOBRE MI</a></li> 
+          <li><a href="IndexTienda.html" class="nav-link">TIENDA</a></li> 
+          <li><a href="IndexFormulario.html" class="nav-link">PERSONALIZACIÓN</a></li> 
+          <li><a href="IndexContacto.html" class="nav-link">CONTACTO</a></li> 
+      </ul>
+       <!-- End of navigation menu -->
+  </nav>
+</header>
+
+<!-- Introduction section with a background image -->
+<section class="intro">
+  <div class="intro-content">  <!-- Logo in the introduction section -->
+     <img src="/TLVfotos-videos/6.Otros/Logo-POSTRES-ARTESANALES.png" alt="logo tlv"> <!-- Inline style adjusted for syntax correctness -->
+  </div>
+</section>
+
+
+    
+<!--BODY 1-->
+    <article class="container">
+      <img class="container__img--1" src="/TLVfotos-videos/2.Inicio/priscilla-du-preez.jpg" width="250" alt="una mano coge un dulce de la encimera"/>
+      <!-- First image with descriptive classes and alt text for accessibility -->
+      <p class="container__text"><!-- Main text content describing the author's passion for baking -->
+        Para mí, hacer repostería es mucho más que una simple actividad en la cocina. Es una forma de <strong>conectar con mi creatividad</strong>, de
+        dar rienda suelta a mis ideas mientras mezclo ingredientes y veo cómo se convierten en algo delicioso.
+        <strong>Cada receta tiene su propio encanto</strong>: el batir la masa, el ver cómo los pasteles se levantan en el horno, o el cuidado al
+        decorar un cupcake. Todo ese proceso me llena de satisfacción, es como un pequeño ritual en el que puedo perderme y disfrutar del momento.<br /><br />Lo
+        que más me gusta de la repostería es que, más allá de lo que se ve o se saborea, <strong>hay algo profundamente personal en cada postre que preparo</strong
+        >. Hay una emoción que pongo en cada detalle, como si cada mezcla y cada
+        toque fueran una forma de expresarme. Y luego, cuando comparto lo que he hecho, <strong>esa felicidad de ver a otros disfrutarlo, es una sensación
+          única.</strong>
+        Es como si, en cada bocado, se pudiera saborear <strong>un pedazo de cariño y dedicación</strong>.
+      </p>
+      <!-- Second image with descriptive classes and alt text for accessibility -->
+      <img class="container__img--2" src="/TLVfotos-videos/2.Inicio/sabrina-mazzeo.jpg" width="250" alt="en la encimera de una tienda hay un pastel y decoración"/>
+    </article>
+
+
+
+
+    
+<!-- BODY 2 -->
+    <div class="wrap">
+       <!-- Wrapper container for the content, often used for layout purposes -->
+      <div>
+        <h2 class="wrap__text">Un corazón dulce y esponjoso</h2>
+      </div>
+    </div>
+
+
+
+
+
+<!-- SLIDER -->
+    <h2>Vuestras opiniones</h2>
+<main class="container"> <!-- Main container for the carousel component -->
+    <div class="container-carrusel">
+      <div class="carruseles"> <!-- Carousel container holding multiple slider sections -->
+        <section class="slider-section">
+          <img src="/TLVfotos-videos/post-opinion/post1.png" alt="post1" />
+        </section>
+        <section class="slider-section">
+            <img src="/TLVfotos-videos/post-opinion/post2.png" alt="post2">
+        </section>
+        <section class="slider-section">
+            <img src="/TLVfotos-videos/post-opinion/post1.png" alt="post3">
+        </section>
+        <section class="slider-section">
+            <img src="/TLVfotos-videos/post-opinion/post4.png" alt="post4">
+        </section>
+        <section class="slider-section">
+            <img src="/TLVfotos-videos/post-opinion/post5.png" alt="post5">
+        </section>
+      </div>
+       <!-- Navigation buttons for the carousel -->
+      <div class="btn-left"><</div> <!-- Button for moving left -->
+      <div class="btn-right">></div> <!-- Button for moving right -->
+    </div>
+  </main>
+
+
+
+
+
+<!-- BODY 3-->
+<h2>Vuestras tartas</h2>
+   <div class="contenedor">
+     <img class="contenedor--img" src="/TLVfotos-videos/4.Tienda/compuesto/6.png" alt="tarta 2">
+     <img class="contenedor--img" src="/TLVfotos-videos/4.Tienda/compuesto/9.png" alt="tarta 1 ">
+     <img class="contenedor--img" src="/TLVfotos-videos/4.Tienda/compuesto/2.png" alt="tarta 3">
+   </div>
+<div class="boton">
+  <a class="boton--a" href="/HTML/IndexFormulario.html">Click para descubrir más</a> <!-- Button section to navigate to another page -->
+</div>
+
+
+<!-- FOOTER-->
+<footer> 
+  <ul class="social-media"> <!-- Creates a list for social media links. -->
+      <li>
+          <a href="https://www.instagram.com/tarteamelavida/" target="_blank">
+              <img src="/TLVfotos-videos/6.Otros/bxl-instagram.svg" alt="Instagram"> 
+          </a>
+      </li>
+      <li>
+          <a href="https://www.facebook.com/" target="_blank">
+              <img src="/TLVfotos-videos/6.Otros/bxl-facebook (1).svg" alt="Facebook"> 
+          </a>
+      </li>
+      <li>    
+          <a href="https://www.youtube.com/" target="_blank">
+              <img src="/TLVfotos-videos/6.Otros/bxl-youtube.svg" alt="YouTube"> 
+          </a>
+      </li>
+      <li>   
+          <a href="https://mail.google.com/" target="_blank">
+              <img src="/TLVfotos-videos/6.Otros/bx-envelope.svg" alt="Correo electrónico"> 
+          </a>
+      </li>
+  </ul>
+
+  <ul class="menu2">  <!-- Creates a list for footer navigation links. -->
+      <li><a href="/HTML/AvisoLegal.html" class="menu-link">Aviso legal</a></li>
+      <li><a href="/HTML/AvisoLegal.html" class="menu-link">Condiciones de compra</a></li>
+      <li><a href="/HTML/AvisoLegal.html" class="menu-link">Privacidad</a></li>
+      <li><a href="/HTML/AvisoLegal.html" class="menu-link">Cookies</a></li>
+  </ul>
+  <p class="text">&copy; 2024 | Tartéame la vida | Todos los derechos reservados | Hecho por Carmenquezarte (Carmen Vázquez)</p> 
+   <!-- Copyright notice and credits. -->
+</footer>
+</body>
+</html>
+
+

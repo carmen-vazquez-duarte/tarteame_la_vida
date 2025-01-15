@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Links to Font Awesome for icons, with integrity and crossorigin attributes for security and performance. -->
+    <title>Tienda</title> <!-- Sets the title of the webpage that appears in the browser tab. -->
+    <link rel="icon" type="image/png" href="/TLVfotos-videos/6.Otros/acronimo-4.png"><!-- Sets a favicon (icon displayed in the browser tab) for the website. The favicon is a PNG image -->
+    <link rel="stylesheet" href="/CSS/EstiloTienda.css"> <!-- Links to an external CSS file that provides styles specific to the 'Tienda' store page. -->
+    <script defer src="/JS/jstienda.js"></script> <!-- Links to an external JavaScript file ('jstienda.js') that is used for adding functionality to the store page.--> 
+    <link rel="stylesheet" href="/CSS/HEADER.css">  <!-- Links to an external CSS file (shared by  all the HTML pages) -->
+
+</head>
+<body> 
+
+
+<!-- HEADER -->
+<!-- Navigation Bar -->
+<header>
+  <nav class="nav-bar">
+    <!--This is the main navigation bar where links to different pages of the website are displayed.-->  
+      <div class="logo"><!-- Logo -->
+      <p>Tartéame la vida</p> <!-- Logo text --> 
+      </div>
+
+    <!-- Checkbox for the hamburger menu (used for mobile navigation) -->
+      <input type="checkbox" id="check" class="menu-toggle"><!--Acts as the trigger for a responsive menu (like a hamburger menu).-->
+      
+     <!-- Icon to open the menu -->
+      <label for="check" class="open-menu">&#9776;</label>  <!-- Clicking on this label toggles the checkbox, controlling the menu's visibility.-->
+      
+<!-- Navigation Menu. Each link points to a specific page of the website-->
+      <ul class="menu">
+        <!-- Navigation links -->
+          <li><a href="Index.html" class="nav-link">INICIO</a></li>
+          <li><a href="IndexSobreMi.html" class="nav-link">SOBRE MI</a></li> 
+          <li><a href="IndexTienda.html" class="nav-link">TIENDA</a></li> 
+          <li><a href="IndexFormulario.html" class="nav-link">PERSONALIZACIÓN</a></li> 
+          <li><a href="IndexContacto.html" class="nav-link">CONTACTO</a></li> 
+      </ul>
+       <!-- End of navigation menu -->
+  </nav>
+</header>
+
+<!-- Introduction section with a background image -->
+<section class="intro">
+  <div class="intro-content">  <!-- Logo in the introduction section -->
+     <img src="/TLVfotos-videos/6.Otros/Logo-POSTRES-ARTESANALES.png" alt="logo tlv"> <!-- Inline style adjusted for syntax correctness -->
+  </div>
+</section>
+
+
+  
+ 
+
+
+
+    
+<!-- Product Container Section -->
+    <section class="contenedor"> <!-- Items Container -->
+        <div class="contenedor-items"><!-- Individual Product Item -->
+            <div class="item">
+                <span class="titulo-item">Bizcocho con nata y moras</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (1).png" width="300px" alt="tarta1" class="img-item">
+                <span class="precio-items">20,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Tarta de merengue y frutos del bosque</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título.png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">32,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Tarta de cacao y tirmisú</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (2).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">30,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Bizcocho doble con crema de queso y naraja</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (3).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">27,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Cupcakes de chocolate y café</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (4).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">3,00€/und</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Cupcakes de Red Velvet</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (5).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">4,00/und</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Cupcakes de vainilla y fresa</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (6).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">2,00€/und</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Tarta tres chocolates y galleta lotus</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (7).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">38,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Tartaleta de merengue y fruta de temporada</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (8).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">32,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+
+            <div class="item">
+                <span class="titulo-item">Bizcocho de chocolate y frutos secos</span>
+                <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (9).png" width="300px" alt="lorem" class="img-item">
+                <span class="precio-items">12,00€</span>
+                <button class="boton-item">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Shopping Cart Section -->
+        <div class="carrito">
+            <div class="header-carrito">
+                <h3>Tu carrito</h3>
+            </div>
+
+            <div class="carrito-items">
+                <div class="carrito-item">  <!-- Example of a Cart Item -->
+                    <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (1).png" alt="carrito de la compra" width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Bizcocho con nata y moras</span>             
+                        <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                        <div class="selector-cantidad"></div><!-- Quantity Selector -->
+                            <i class="fa-solid fa-minus restar-cantidad"></i> <!-- Decrease number of items -->
+                            <i class="fa-solid fa-plus sumar-cantidad"></i> <!-- Adds number of items -->
+                            <span class="btn-eliminar"> <!-- Eliminate full item -->
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
+                <span class="carrito-item-precio">20,00€</span>
+                </div>
+               
+            
+            
+            
+                <div class="carrito-item">
+                    <img src="/TLVfotos-videos/4.Tienda/cuadradas/Diseño sin título (7).png" alt="carrito de la compra" width="80px">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Tarta tres chocolates y galleta lotus</span>
+                        <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                        <div class="selector-cantidad"></div>
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                         </span>
+                    </div>
+                <span class="carrito-item-precio">38,00€</span>
+                </div>
+                   
+            </div>
+       
+ <!-- Cart Total Section -->        
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu total</strong>
+                    <span class="carrito-precio-total">
+                        58,00€
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    
+<!-- FOOTER-->
+<footer> 
+    <ul class="social-media"> <!-- Creates a list for social media links. -->
+        <li>
+            <a href="https://www.instagram.com/tarteamelavida/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-instagram.svg" alt="Instagram"> 
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-facebook (1).svg" alt="Facebook"> 
+            </a>
+        </li>
+        <li>    
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bxl-youtube.svg" alt="YouTube"> 
+            </a>
+        </li>
+        <li>   
+            <a href="https://mail.google.com/" target="_blank">
+                <img src="/TLVfotos-videos/6.Otros/bx-envelope.svg" alt="Correo electrónico"> 
+            </a>
+        </li>
+    </ul>
+
+    <ul class="menu2">  <!-- Creates a list for footer navigation links. -->
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Aviso legal</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Condiciones de compra</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Privacidad</a></li>
+        <li><a href="/HTML/AvisoLegal.html" class="menu-link">Cookies</a></li>
+    </ul>
+    <p class="text">&copy; 2024 | Tartéame la vida | Todos los derechos reservados | Hecho por Carmenquezarte (Carmen Vázquez)</p> 
+     <!-- Copyright notice and credits. -->
+</footer>
+</body>
+</html>

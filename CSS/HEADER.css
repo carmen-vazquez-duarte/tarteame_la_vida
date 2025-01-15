@@ -1,0 +1,144 @@
+/* Import fonts from Google Fonts */
+  
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: "Roboto", sans-serif; /* Sets Roboto as the primary font for the text. */
+    font-style: italic; 
+    background-image: url(/TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Sets an image as the body background. */
+    background-size: cover; 
+    background-attachment: fixed; 
+    color: #56091f; 
+}
+
+header {
+    width: 100%; /* Ensures the header spans the full width of the page. */
+    background-color: #fff;
+}
+/* Barra de navegación */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes items evenly with space between them. */
+    padding: 20px;/* Adds padding around the navigation bar. */
+    top: 0;/* Positions the navigation bar at the top of the page. */
+    left: 0;/* Aligns the navigation bar to the left. */
+    width: 100%;
+    background-color: rgba(207, 106, 160, 0.132); /* Background semi-transparent */
+    z-index: 1000;/* Ensures the navigation bar appears above other content. */
+}
+
+.logo img {
+    width: 100px;
+    height: auto; /* Maintains the aspect ratio of the logo. */
+}
+
+/* Hamburger menu */
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Aligns menu items horizontally by default. */
+}
+
+.menu li {
+    margin-left: 20px;
+    list-style: none;/* Removes default bullet points from list items. */
+}
+
+.nav-link {
+   
+    text-decoration: none;
+    color:#56091f;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: crimson;
+}
+
+/* Icon for opening the menu on small screens */
+.open-menu {
+    display: none;  /* Hides the menu icon by default. */
+    font-size: 30px;
+    cursor: pointer;
+    color: #56091f;
+}
+
+/* Hidden checkbox for toggling the menu */
+#check {
+    display: none; /* Hides the checkbox used for the menu toggle. */
+}
+
+/* Styles for the menu on small screens */
+@media (max-width:360){
+    .logo img{
+        width: 60px;
+        
+    }
+}
+@media (max-width: 750px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #F5CEC7;
+        position: absolute;  /* Positions the menu relative to the page. */
+       
+        top: 60px;/* Positions the menu below the header. */
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    #check:checked ~ .menu {
+        display: flex; /* Displays the menu when the checkbox is checked. */
+    }
+
+    .open-menu {
+        display: block;  /* Shows the menu icon on small screens. */
+    }
+
+    .menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+}
+
+ /*Header section */
+.intro {
+    height: 100vh;
+    background-image: url('/TLVfotos-videos/1.cabeceras/Fondo.svg'); /* Sets a background image for the header. */
+    background-size: cover; /* Ensures the background image covers the section completely. */
+    background-position: center;  /* Centers the background image. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238, 236, 236);
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.intro-content h1 {
+    font-size: 3em; /* Sets a large font size for the main heading. */
+    margin: 0; /* Removes margin around the heading. */
+}
+
+.intro-content p {
+    font-size: 1.5em;
+}
+

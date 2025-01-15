@@ -1,0 +1,253 @@
+
+/* Import fonts from Google Fonts */
+  
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+
+/* BODY 1 */
+.container { /* General container settings */
+    display: flex;
+   
+}
+
+.container__text { /* Text styling inside the container */
+    color: #56091f;
+    padding:30px;
+    text-align: justify; /* Justifies text for clean alignment */
+    background-color: #F5CDC9;
+    width: 630px;
+    height: 330px;
+    letter-spacing: normal;
+    line-height: 20px;
+    font-style: italic;
+    position: absolute; /* Allows precise positioning in relation to its parent */
+    z-index: 3; /*Places this element above others with lower z-index values */
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.50); /* Adds a shadow for a 3D effect */
+    margin-bottom: 30px;
+    margin-top: 30px;
+   
+}
+
+.container__img--1 {
+    position:relative;
+    z-index:0; /* Places this image behind others with higher z-index values */
+    margin-right: 550px;
+
+  
+}
+
+.container__img--2 {
+    position: relative;
+    z-index: -1; /* Places this image above the first image but below the text */
+    
+    margin-right:-60;
+}
+@media (max-width: 785px) {
+    .container__img--2, .container__img--1, .wrap, .wrap__text {
+        display:none;
+    }
+    .container__text {
+        display: block;
+        margin-top: 500px;
+        max-width: 100%;
+        height: auto;
+       
+    }
+}
+
+
+/* BODY 2 */
+.wrap {
+    width: cover;
+    display: flex; /* Enables flexbox for layout control */
+    min-height: 500px; /* Ensures the container has a minimum height */
+    margin: 50px;
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    background-image: url(/TLVfotos-videos/1.cabeceras/hayley-maxwell.jpg); /* Sets a background image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+}
+
+.wrap__text { /* Styling for the text inside the wrapper */
+    color: #56091f;
+    font-size: 100px;
+    font-weight: 400;
+    font-family: "Cookie", serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+h2 { /* General styling for all <h2> elements */
+    color: #56091f;
+    font-family: "Cookie", serif;
+    font-style: italic;
+    font-size: 70px;
+    text-align: center; /* Centers the text horizontally */
+}
+
+
+
+
+/* CSS SLIDER */ 
+.container{ /* Main container for centering the carousel */
+    display: flex; /* Enables flexbox for layout */
+    align-items: center ;
+    justify-content: center ;
+    margin-top: 15px;
+    margin-bottom: 50px;
+   
+}
+.container-carrusel {
+    width: 400px;
+    height: 410px;
+    border-radius: 15px; /* Adds rounded corners to the carousel */
+    overflow: hidden; /* Ensures content outside the container is clipped */
+    position: relative;
+    box-shadow: 23px 26px 14px -3px rgba(0,0,0,0.75); /* Adds a shadow for depth */
+    
+}
+
+.carruseles {
+    width: 500%;  /* Total width for holding all slides (5 slides) */
+    height: 100%; /* Matches the height of the carousel */
+    display: flex; /* Aligns slides in a row */
+   
+}
+
+.slider-section {
+    width: calc(100% / 5); /* Divides the container width evenly among 5 slides */
+    height: 100%;
+}
+
+.slider-section img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill the container */
+    border-radius: 15px;
+}
+
+.btn-left,
+.btn-right { /* Left and right navigation buttons */
+    display: flex;
+    position: absolute;  /* Positions buttons relative to the carousel container */
+    top: 50%;
+    font-size: 1.5rem; /* Sets the size of the button text/icons */
+    background-color: transparent; /* Makes the background invisible */
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-weight: 600;
+    transform: translate(0, -50%); /* Centers the buttons vertically */
+    transition: 0.5s ease; /* Smooth hover transition effect */
+    user-select: none; /* Prevents text selection on click */
+}
+
+.btn.left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.btn-left:hover,
+.btn-right:hover { /* Hover effect for navigation buttons */
+    color: crimson; /* Changes the button color to crimson on hover */
+}
+
+
+
+/* BODY 3 */
+.contenedor{ /* Main container for the grid layout */
+    width: 80%; /* Sets the container width to 80% of the parent element */
+    margin:50px auto 50px;
+    display:grid;  /* Enables CSS Grid for layout control */
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); /* Creates responsive columns:
+    - `auto-fit`: Automatically adjusts the number of columns to fit available space.
+    - `minmax(240px, 1fr)`: Ensures columns are at least 240px wide but can expand equally. */
+    gap:30px; /* Adds spacing between grid items */
+}
+.contenedor--img{
+    width: 100%; /* Ensures the images take up the full width of their grid cell */
+    cursor:pointer; /* Changes the cursor to a pointer, indicating interactivity */
+    transition: 1s; /* Adds a smooth transition effect for hover interactions or animations */
+}
+
+.boton{ /* Styling for the button container */
+   display:flex;
+   text-align: center;
+   justify-content: center;
+    font-size: 30px;
+    margin:40px;
+}
+.boton--a{ /* Styling for the link inside the button */
+    text-decoration: none;
+    color:#56091f;
+    padding: 10px;
+    background-color: white;
+    border:2px dotted rgb(86, 2, 2); /* Adds a dotted border with a dark red color */
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.boton--a:hover{
+    color:crimson;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #de9d91;
+    padding: 40px 20px; /* Internal spacing: 40px top/bottom, 20px left/right. */
+    text-align: center; 
+    background-image: url(/TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Decorative background image. */
+}
+
+.social-media {
+    display: flex; /* Uses Flexbox for the layout of social media icons. */
+    justify-content: center; /* Horizontally centers the icons. */
+    gap: 20px; 
+    margin-bottom: 20px; 
+    list-style-type: none;
+}
+
+.social-media img {
+    width: 30px; /* Sets a fixed size for social media icons. */
+    transition: transform 0.3s ease; /* Adds a smooth scaling effect when hovered. */
+}
+
+.social-media img:hover {
+    transform: scale(1.2); 
+}
+
+.menu2{
+    display: flex; /* Enables flexbox layout for the menu container. */
+    flex-direction: column; /* Arranges menu items in a vertical column. */
+    list-style: none; /* Removes default list bullet points. */
+}
+.menu-elem {
+    display: flex; 
+    justify-content: center; 
+    align-content: center;
+    gap: 15px; 
+    margin-bottom: 10px; /* Adds spacing below each menu item. */
+}
+
+.menu-link { 
+    list-style: none;  /* Removes default list bullet points for the menu links. */
+    align-content: center;
+    color: #56091f; 
+    transition: color 0.3s ease; /* Smoothly transitions the color on hover or interaction. */
+}
+
+
+.menu-link:hover {
+     color: crimson; /* Changes link color when hovered. */
+}
+
+.text {
+    font-size: 0.8rem; 
+    color: black; 
+    margin-top: 10px;
+}
