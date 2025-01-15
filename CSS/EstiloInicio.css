@@ -65,7 +65,7 @@
     margin: 50px;
     align-items: center; /* Centers child elements vertically */
     justify-content: center; /* Centers child elements horizontally */
-    background-image: url(/TLVfotos-videos/1.cabeceras/hayley-maxwell.jpg); /* Sets a background image */
+    background-image:url(../TLVfotos-videos/1.cabeceras/hayley-maxwell.jpg); /* Sets a background image */
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center;
     background-attachment: fixed; /* Keeps the background image fixed during scrolling */
@@ -201,7 +201,7 @@ footer {
     background-color: #de9d91;
     padding: 40px 20px; /* Internal spacing: 40px top/bottom, 20px left/right. */
     text-align: center; 
-    background-image: url(/TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Decorative background image. */
+    background-image:url(../TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Decorative background image. */
 }
 
 .social-media {

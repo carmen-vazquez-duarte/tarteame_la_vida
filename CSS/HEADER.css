@@ -13,7 +13,7 @@
 body { 
     font-family: "Roboto", sans-serif; /* Sets Roboto as the primary font for the text. */
     font-style: italic; 
-    background-image: url(/TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Sets an image as the body background. */
+    background-image:url(../TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Sets an image as the body background. */
     background-size: cover; 
     background-attachment: fixed; 
     color: #56091f; 
@@ -121,7 +121,7 @@ header {
  /*Header section */
 .intro {
     height: 100vh;
-    background-image: url('/TLVfotos-videos/1.cabeceras/Fondo.svg'); /* Sets a background image for the header. */
+    background-image: url('../TLVfotos-videos/1.cabeceras/Fondo.svg'); /* Sets a background image for the header. */
     background-size: cover; /* Ensures the background image covers the section completely. */
     background-position: center;  /* Centers the background image. */
     display: flex;

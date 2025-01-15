@@ -9,7 +9,7 @@ body {
  padding: 0; 
  font-family: "Roboto", sans-serif; /* Sets Roboto as the primary font for the text. */
  font-style: italic; 
- background-image: url(/TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Sets an image as the body background. */
+ background-image: url(../TLVfotos-videos/6.Otros/Fondo-polka-dots.png); /* Sets an image as the body background. */
  background-size: cover; 
  background-attachment: fixed; 
  color: #56091f; 

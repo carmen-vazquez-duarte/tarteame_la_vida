@@ -199,5 +199,5 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
 }
 document.getElementsByClassName("btn-pagar")[0].addEventListener("click", mostrarAviso);
 function mostrarAviso(){
-  alert("¡Felicidades!Su compra se ha completado con éxito.")
+  alert("¡Felicidades! Su compra se ha completado con éxito.")
 }
