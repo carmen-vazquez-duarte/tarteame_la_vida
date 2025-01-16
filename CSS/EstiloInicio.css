@@ -52,7 +52,9 @@
         margin-top: 500px;
         max-width: 100%;
         height: auto;
-       
+    .wrap, .wrap__text{
+        display:none;
+    }   
     }
 }
 
