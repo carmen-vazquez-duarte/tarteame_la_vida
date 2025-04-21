@@ -14,23 +14,12 @@
     letter-spacing: normal;
     line-height: 20px;
     font-style: italic;
-    position: absolute;
+    position: relative;
     z-index: 3;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 1.875rem;
     margin-top: 1.875rem;
 
-}
-
-.container__img--1 {
-    position: relative;
-    z-index: 0;
-    margin-right: 34rem;
-}
-
-.container__img--2 {
-    position: relative;
-    z-index: -1;
 }
 
 .title {
