@@ -9,13 +9,13 @@ function ready() {
   var botonesEliminarItem = document.getElementsByClassName("btn-eliminar");
   for (var i = 0; i < botonesEliminarItem.length; i++) {
     var button = botonesEliminarItem[i];
-    button.addEventListener("click", eliminarItemCarrito);
+    button.addEventListener("click", eliminarItemCarritoHandler);
   }
   //Agrega funcionalidad al boton sumar cantidad
   var botonesSumarCantidad = document.getElementsByClassName("sumar-cantidad");
   for (var i = 0; i < botonesSumarCantidad.length; i++) {
     var button = botonesSumarCantidad[i];
-    button.addEventListener("click", sumarCantidad);
+    button.addEventListener("click", sumarCantidadHandler);
   }
 
   //Agrega funcionalidad al boton restar cantidad
@@ -23,17 +23,17 @@ function ready() {
     document.getElementsByClassName("restar-cantidad");
   for (var i = 0; i < botonesRestarCantidad.length; i++) {
     var button = botonesRestarCantidad[i];
-    button.addEventListener("click", restarCantidad);
+    button.addEventListener("click", restarCantidadHandler);
   }
   //Agrega funcionalidad a los botones Agregar al carrito
   var botonesAgregarAlCarrito = document.getElementsByClassName("boton-item");
   for (var i = 0; i < botonesAgregarAlCarrito.length; i++) {
     var button = botonesAgregarAlCarrito[i];
-    button.addEventListener("click", prepararItemCarrito);
+    button.addEventListener("click", prepararItemCarritoHandler);
   }
 }
 
-function eliminarItemCarrito(event) {
+function eliminarItemCarritoHandler(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.parentElement.parentElement.remove();
 
@@ -88,7 +88,7 @@ function mostrarCarrito() {
   }
 }
 
-function sumarCantidad(event) {
+function sumarCantidadHandler(event) {
   var buttonClicked = event.target;
   // Asegúrate de que tiene un elemento padre válido
   var selector = buttonClicked.parentElement;
@@ -114,7 +114,7 @@ function sumarCantidad(event) {
   actualizarTotalCarrito();
 }
 
-function restarCantidad(event) {
+function restarCantidadHandler(event) {
   var buttonClicked = event.target;
   // Asegúrate de que tiene un elemento padre válido
   var selector = buttonClicked.parentElement;
@@ -143,7 +143,7 @@ function restarCantidad(event) {
   actualizarTotalCarrito();
 }
 
-function prepararItemCarrito(event) {
+function prepararItemCarritoHandler(event) {
   var button = event.target;
   var item = button.parentElement;
   var titulo = item.getElementsByClassName("titulo-item")[0].innerText;
@@ -163,7 +163,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
   );
   for (var i = 0; i < nombresItemsCarrito.length; i++) {
     if (nombresItemsCarrito[i].innerText == titulo) {
-      alert("El item y se encuentra en el carrito");
+      alert("El item ya se encuentra en el carrito");
       return;
     }
   }
@@ -186,18 +186,18 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
     item.innerHTML = itemCarritoContenido;
     itemsCarrito.append(item);
     //Funcionalidad eliminar nuevo items
-    item.getElementsByClassName('btn-eliminar')[0].addEventListener('click',eliminarItemCarrito);
+    item.getElementsByClassName('btn-eliminar')[0].addEventListener('click',eliminarItemCarritoHandler);
 
     //Funcionalidad sumar nuevo items
     var botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
-    botonSumarCantidad.addEventListener('click',sumarCantidad)
+    botonSumarCantidad.addEventListener('click',sumarCantidadHandler)
 
     //Funcionalidad restar nuevo items
     var botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
-    botonRestarCantidad.addEventListener('click',restarCantidad)
+    botonRestarCantidad.addEventListener('click',restarCantidadHandler)
     actualizarTotalCarrito();
 }
-document.getElementsByClassName("btn-pagar")[0].addEventListener("click", mostrarAviso);
-function mostrarAviso(){
+document.getElementsByClassName("btn-pagar")[0].addEventListener("click", mostrarAvisoHandler);
+function mostrarAvisoHandler(){
   alert("¡Felicidades! Su compra se ha completado con éxito.")
 }

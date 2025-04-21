@@ -1,180 +1,195 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalización</title> <!-- Sets the title of the webpage that appears in the browser tab. -->
-    <link rel="icon" type="image/png" href="TLVfotos-videos/6.Otros/acronimo-4.png">  <!-- Adds a favicon for the website. -->
-    <link rel="stylesheet" href="CSS/EstiloFormulario.css"> <!-- Links to an external CSS file that provides styles specific to the 'Formulario' (form) page. -->
-    <script defer src="JS/jsformulario.js"></script> <!-- Links to an external JavaScript file ('jsformulario.js') that adds functionality to the form page. -->
-    <link rel="stylesheet" href="CSS/HEADER.css">  <!-- Links to an external CSS file (shared by  all the HTML pages) -->
-
+    <link rel="icon" type="image/png" href="TLVfotos-videos/6.Otros/acronimo-4.png">
+    <!-- Adds a favicon for the website. -->
+    <link rel="stylesheet" href="CSS/EstiloFormulario.css">
+    <!-- Links to an external CSS file that provides styles specific to the 'Formulario' (form) page. -->
+    <script defer src="JS/jsformulario.js"></script>
+    <!-- Links to an external JavaScript file ('jsformulario.js') that adds functionality to the form page. -->
+    <link rel="stylesheet" href="CSS/HEADER.css"> <!-- Links to an external CSS file (shared by  all the HTML pages) -->
 </head>
-<body> 
 
+<body>
 
-<!-- HEADER -->
-<!-- Navigation Bar -->
-<header>
-    <nav class="nav-bar">
-      <!--This is the main navigation bar where links to different pages of the website are displayed.-->  
-        <div class="logo"><!-- Logo -->
-        <p>Tartéame la vida</p> <!-- Logo text --> 
+    <!-- HEADER -->
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="nav-bar">
+            <!--This is the main navigation bar where links to different pages of the website are displayed.-->
+            <div class="logo"><!-- Logo -->
+                <p>Tartéame la vida</p> <!-- Logo text -->
+            </div>
+
+            <!-- Checkbox for the hamburger menu (used for mobile navigation) -->
+            <input type="checkbox" id="check" class="menu-toggle"><!--Acts as the trigger for a responsive menu (like a hamburger menu).-->
+
+            <!-- Icon to open the menu -->
+            <label for="check" class="open-menu" title="Abrir menú">&#9776;</label>
+            <!-- Clicking on this label toggles the checkbox, controlling the menu's visibility.-->
+
+            <!-- Navigation Menu. Each link points to a specific page of the website-->
+            <ul class="menu">
+                <!-- Navigation links -->
+                <li><a href="index.html" class="nav-link" title="Ir a la página de inicio">INICIO</a></li>
+                <li><a href="IndexSobreMi.html" class="nav-link" title="Conoce más sobre mí">SOBRE MI</a></li>
+                <li><a href="IndexTienda.html" class="nav-link" title="Explora la tienda">TIENDA</a></li>
+                <li><a href="IndexFormulario.html" class="nav-link" title="Personaliza tu tarta">PERSONALIZACIÓN</a></li>
+                <li><a href="IndexContacto.html" class="nav-link" title="Ponte en contacto conmigo">CONTACTO</a></li>
+            </ul>
+            <!-- End of navigation menu -->
+        </nav>
+    </header>
+
+    <!-- Introduction section with a background image -->
+    <div class="intro">
+        <div class="intro-content"> <!-- Logo in the introduction section -->
+            <img loading="lazy" src="TLVfotos-videos/6.Otros/Logo-POSTRES-ARTESANALES.png" alt="logo tlv">
+            <!-- Inline style adjusted for syntax correctness -->
         </div>
-  
-      <!-- Checkbox for the hamburger menu (used for mobile navigation) -->
-        <input type="checkbox" id="check" class="menu-toggle"><!--Acts as the trigger for a responsive menu (like a hamburger menu).-->
-        
-       <!-- Icon to open the menu -->
-        <label for="check" class="open-menu">&#9776;</label>  <!-- Clicking on this label toggles the checkbox, controlling the menu's visibility.-->
-        
-  <!-- Navigation Menu. Each link points to a specific page of the website-->
-        <ul class="menu">
-          <!-- Navigation links -->
-            <li><a href="index.html" class="nav-link">INICIO</a></li>
-            <li><a href="IndexSobreMi.html" class="nav-link">SOBRE MI</a></li> 
-            <li><a href="IndexTienda.html" class="nav-link">TIENDA</a></li> 
-            <li><a href="IndexFormulario.html" class="nav-link">PERSONALIZACIÓN</a></li> 
-            <li><a href="IndexContacto.html" class="nav-link">CONTACTO</a></li> 
-        </ul>
-         <!-- End of navigation menu -->
-    </nav>
-  </header>
-  
-  <!-- Introduction section with a background image -->
-  <section class="intro">
-    <div class="intro-content">  <!-- Logo in the introduction section -->
-       <img src="TLVfotos-videos/6.Otros/Logo-POSTRES-ARTESANALES.png" alt="logo tlv"> <!-- Inline style adjusted for syntax correctness -->
     </div>
-  </section>
-  
-  
 
+    <!-- LIGHTBOX -->
+    <br>
+    <h1 class="titulo">Vuestras tartas personalizadas 2024</h1>
 
+    <div class="full--img" id="fullImgBox">
+        <img loading="lazy" src="#" id="fullImg" alt="pastel1"> <!-- Full image to display when a gallery image is clicked -->
+        <span onclick="closeImgHandler()" title="Cerrar imagen">X</span> <!-- Close button for the full image overlay -->
+    </div>
 
-<!-- LIGHTBOX -->
-<br>
-<h1 class="titulo">Vuestras tartas personalizadas 2024</h1>
+    <div class="galeria"> <!-- Individual gallery image -->
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/1.png" alt="pastel 1"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/1.png')" title="Ver pastel 1 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/2.png" alt="pastel 2"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/2.png')" title="Ver pastel 2 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/3.png" alt="pastel 3"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/3.png')" title="Ver pastel 3 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/4.png" alt="pastel 4"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/4.png')" title="Ver pastel 4 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/5.png" alt="pastel 5"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/5.png')" title="Ver pastel 5 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/6.png" alt="pastel 6"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/6.png')" title="Ver pastel 6 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/7.png" alt="pastel 7"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/7.png')" title="Ver pastel 7 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/8.png" alt="pastel 8"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/8.png')" title="Ver pastel 8 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/9.png" alt="pastel 9"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/9.png')" title="Ver pastel 9 en grande">
+        <img loading="lazy" class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/10.png" alt="pastel 10"
+            onclick="openImgHandler('TLVfotos-videos/4.Tienda/compuesto/10.png')" title="Ver pastel 10 en grande">
+    </div>
 
-<div class="full--img" id="fullImgBox">
-    <img src="#" id="fullImg" alt="pastel1"> <!-- Full image to display when a gallery image is clicked -->
-    <span onclick="closeImg()">X</span> <!-- Close button for the full image overlay -->
- </div> 
+    <!-- FORM -->
+    <h2 class="tartap">Tu tarta personalizada</h2>
+    <main class="formulario__container"> <!-- Main container for the form content. -->
+        <form class="formulario" action="tratamiento.php" method="POST">
+            <!-- Form sends data to a PHP file using POST method.NOT IN USE -->
+            <div class="formulario__field"> <!-- Text field for the user's name -->
+                <label class="formulario__field--label" for="nombre">Nombre y Apellidos:</label>
+                <input class="formulario__field--input" id="nombre" name="nombre" type="text" required>
+                <!-- Input field for name (required). -->
+            </div>
 
-<div class="galeria"> <!-- Individual gallery image -->
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/1.png" alt="pastel 1" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/1.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/2.png" alt="pastel 2" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/2.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/3.png" alt="pastel 3" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/3.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/4.png" alt="pastel 4" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/4.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/5.png" alt="pastel 5" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/5.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/6.png" alt="pastel 6" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/6.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/7.png" alt="pastel 7" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/7.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/8.png" alt="pastel 8" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/8.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/9.png" alt="pastel 9" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/9.png')">
-    <img class="galeria--img" src="TLVfotos-videos/4.Tienda/compuesto/10.png" alt="pastel 10" onclick="openImg('TLVfotos-videos/4.Tienda/compuesto/10.png')">
-</div>
+            <div class="formulario__field"> <!-- Phone number for contacting the customer -->
+                <label class="formulario__field--label" for="tel">Teléfono de contacto:</label>
+                <input class="formulario__field--input" id="tel" name="tel" type="tel" required>
+            </div>
 
+            <div class="formulario__field"> <!-- Email for contacting the customer-->
+                <label class="formulario__field--label" for="email">Email de contacto:</label>
+                <input class="formulario__field--input" id="email" name="email" type="email" required>
+            </div>
 
-<!-- FORM -->
- <h2 class="tartap">Tu tarta personalizada</h2>
-<main class="formulario__container">  <!-- Main container for the form content. -->
-  <form  class="formulario" action="tratamiento.php" method="POST"> <!-- Form sends data to a PHP file using POST method.NOT IN USE -->
-      <div class="formulario__field"> <!-- Text field for the user's name -->
-          <label class="formulario__field--label" for="nombre">Nombre y Apellidos:</label>
-          <input class="formulario__field--input" name="nombre" type="text" required> <!-- Input field for name (required). -->
-      </div>
+            <div class="formulario__field"> <!--Order number (not required) -->
+                <label class="formulario__field--label" for="text">Número de pedido:</label>
+                <input class="formulario__field--input" id="text" name="text" type="text">
+            </div>
 
-      <div class="formulario__field">  <!-- Phone number for contacting the customer -->
-          <label class="formulario__field--label" for="tel">Teléfono de contacto:</label> 
-          <input class="formulario__field--input" name="tel" type="tel" required> 
-      </div>
+            <div class="formulario__field">
+                <label class="formulario__field--label" for="number">¿Para cuántas personas será la tarta?:</label>
+                <input class="formulario__field--input" id="number" name="number" type="number" required>
+            </div>
 
-      <div class="formulario__field">  <!-- Email for contacting the customer-->
-          <label class="formulario__field--label" for="email">Email de contacto:</label> 
-          <input class="formulario__field--input" id="email" name="email" type="email" required> 
-      </div>
+            <div class="formulario__field">
+                <label class="formulario__field--label" for="text">Sabor y relleno:</label>
+                <input class="formulario__field--input" name="text" type="text" required>
+            </div>
 
-      <div class="formulario__field">  <!--Order number (not required) -->
-          <label class="formulario__field--label" for="text">Número de pedido:</label> 
-          <input class="formulario__field--input" id="text" name="text" type="text" > 
-      </div>
+            <div class="formulario__field">
+                <label class="formulario__field--label" for="text">¿Alguien en tu grupo tiene restricciones
+                    alimenticias?:</label>
+                <input class="formulario__field--input" name="text" type="text" required>
+            </div>
 
-      <div class="formulario__field">  
-          <label class="formulario__field--label" for="number">¿Para cuántas personas será la tarta?:</label> 
-          <input class="formulario__field--input" id="number" name="number" type="number" required> 
-      </div>
+            <div class="formulario__field">
+                <label class="formulario__field--label" for="text">¿Tienes un presupuesto aproximado para esta
+                    tarta?:</label>
+                <input class="formulario__field--input" name="text" type="text" required>
+            </div>
 
-      <div class="formulario__field">  
-          <label class="formulario__field--label" for="text">Sabor y relleno:</label> 
-          <input class="formulario__field--input" name="text" type="text" required > 
-      </div>
+            <div class="formulario__field"><!-- Dropdown menu for selecting the message subject -->
+                <label class="formulario__field--label" for="asunto">Asunto:</label>
+                <select class="formulario__field--select" id="asunto" name="asunto" required>
+                    <option value="" disabled selected>Selecciona una opción</option><!-- Option for feedback. -->
+                    <option value="personalizacion">Háblame sobre tu tarta personalizada</option>
+                    <option value="tema">¿Tienes un tema o estilo específico en mente para la tarta?</option>
+                    <option value="incidencia">¿Alguna incidencia?</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
 
-      <div class="formulario__field">  
-          <label class="formulario__field--label" for="text">¿Alguien en tu grupo tiene restricciones alimenticias?:</label> 
-          <input class="formulario__field--input"  name="text" type="text" required > 
-      </div>
+            <div class="formulario__field"> <!-- Textarea for the user's message -->
+                <label class="formulario__field--label" for="comentario">Mensaje:</label>
+                <textarea class="formulario__field--textarea" id="comentario" name="comentario" cols="30" rows="10"
+                    required></textarea>
+            </div>
 
-      <div class="formulario__field">  
-          <label class="formulario__field--label" for="text">¿Tienes un presupuesto aproximado para esta tarta?:</label> 
-          <input class="formulario__field--input" name="text" type="text" required > 
-      </div>
+            <div class="formulario__field"> <!-- Submit button -->
+                <button class="formulario__field--button" type="submit" title="Enviar el formulario">Enviar</button>
+            </div>
+        </form>
+    </main>
 
-      <div class="formulario__field"><!-- Dropdown menu for selecting the message subject -->
-          <label class="formulario__field--label" for="asunto">Asunto:</label> 
-          <select class="formulario__field--select" id="asunto" name="asunto" required><!-- Option for feedback. -->
-              <option value="personalizacion">Háblame sobre tu tarta personalizada</option>
-              <option value="tema">¿Tienes un tema o estilo específico en mente para la tarta?</option>
-              <option value="incidencia">¿Alguna incidencia?</option>
-              <option value="otros">Otros</option>
-          </select>
-      </div>
+    <!-- FOOTER-->
+    <footer>
+        <ul class="social-media"> <!-- Creates a list for social media links. -->
+            <li>
+                <a href="https://www.instagram.com/tarteamelavida/" target="_blank" title="Visita nuestro Instagram">
+                    <img loading="lazy" src="TLVfotos-videos/6.Otros/bxl-instagram.svg" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" title="Visita nuestro Facebook">
+                    <img loading="lazy" src="TLVfotos-videos/6.Otros/bxl-facebook.svg" alt="Facebook"> </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" target="_blank" title="Visita nuestro canal de YouTube">
+                    <img loading="lazy" src="TLVfotos-videos/6.Otros/bxl-youtube.svg" alt="YouTube">
+                </a>
+            </li>
+            <li>
+                <a href="https://mail.google.com/" target="_blank" title="Enviar un correo electrónico">
+                    <img loading="lazy" src="TLVfotos-videos/6.Otros/bx-envelope.svg" alt="Correo electrónico">
+                </a>
+            </li>
+        </ul>
 
-      <div class="formulario__field"> <!-- Textarea for the user's message -->
-          <label class="formulario__field--label" for="comentario">Mensaje:</label> 
-          <textarea class="formulario__field--textarea" id="comentario" name="comentario" cols="30" rows="10" required></textarea> 
-      </div>
-
-      <div class="formulario__field"> <!-- Submit button -->
-          <button class="formulario__field--button" type="submit">Enviar</button>
-      </div>
-  </form>
-</main>
-
-
-
-
-<!-- FOOTER-->
-<footer> 
-    <ul class="social-media"> <!-- Creates a list for social media links. -->
-        <li>
-            <a href="https://www.instagram.com/tarteamelavida/" target="_blank">
-                <img src="TLVfotos-videos/6.Otros/bxl-instagram.svg" alt="Instagram"> 
-            </a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/" target="_blank">
-                <img src="TLVfotos-videos/6.Otros/bxl-facebook (1).svg" alt="Facebook"> </a>
-        </li>
-        <li>    
-            <a href="https://www.youtube.com/" target="_blank">
-                <img src="TLVfotos-videos/6.Otros/bxl-youtube.svg" alt="YouTube"> 
-            </a>
-        </li>
-        <li>   
-            <a href="https://mail.google.com/" target="_blank">
-                <img src="TLVfotos-videos/6.Otros/bx-envelope.svg" alt="Correo electrónico"> 
-            </a>
-        </li>
-    </ul>
-
-    <ul class="menu2">  <!-- Creates a list for footer navigation links. -->
-        <li><a href="AvisoLegal.html" class="menu-link">Aviso legal</a></li>
-        <li><a href="AvisoLegal.html" class="menu-link">Condiciones de compra</a></li>
-        <li><a href="AvisoLegal.html" class="menu-link">Privacidad</a></li>
-        <li><a href="AvisoLegal.html" class="menu-link">Cookies</a></li>
-    </ul>
-    <p class="text">&copy; 2024 | Tartéame la vida | Todos los derechos reservados | Hecho por Carmenquezarte (Carmen Vázquez)</p> 
-     <!-- Copyright notice and credits. -->
-</footer>
+        <ul class="menu2"> <!-- Creates a list for footer navigation links. -->
+            <li><a href="AvisoLegal.html" class="menu-link" title="Ver aviso legal">Aviso legal</a></li>
+            <li><a href="AvisoLegal.html" class="menu-link" title="Consultar condiciones de compra">Condiciones de compra</a></li>
+            <li><a href="AvisoLegal.html" class="menu-link" title="Leer la política de privacidad">Privacidad</a></li>
+            <li><a href="AvisoLegal.html" class="menu-link" title="Información sobre cookies">Cookies</a></li>
+        </ul>
+        <p class="text">&copy; 2024 | Tartéame la vida | Todos los derechos reservados | Hecho por Carmenquezarte
+            (Carmen Vázquez)</p>
+        <!-- Copyright notice and credits. -->
+    </footer>
 </body>
+
 </html>
